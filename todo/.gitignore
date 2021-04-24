@@ -1,3 +1,4 @@
 ../.idea/
 env/
 tasks/__pycache__/
+todo/__pycache__/
