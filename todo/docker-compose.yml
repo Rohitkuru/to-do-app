@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  todo:
+    image: todo:v5
+    volumes:
+      - asset:/app/asset
+
+  nginx:
+    image: nginx:v1
+    ports:
+      - "80:80"
+    volumes:
+      - asset:/static
+    depends_on:
+      - todo
+volumes:
+  asset:
